@@ -316,3 +316,6 @@ main { padding: 32px 20px 10px; }
 .sv-box-inter  { fill: var(--surface); stroke: var(--brand); stroke-width: 1.5; stroke-dasharray: 5 4; }
 .sv-arrow     { stroke: var(--ink-soft); stroke-width: 2.5; fill: none; }
 .sv-arrowhead { fill: var(--ink-soft); }
+
+/* Per-molecule systematic (IUPAC) name shown under each viewer's name */
+.mol-sci { font-size: 0.76rem; color: var(--ink-soft); font-style: italic; margin: 2px 2px 8px; line-height: 1.3; min-height: 2.6em; }
