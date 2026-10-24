@@ -100,6 +100,7 @@ a:hover { color: var(--brand-ink); }
 .reaction-strip .major { color: var(--major); }
 .reaction-strip .minor { color: var(--minor); }
 .reaction-strip .plus { color: var(--ink-soft); font-size: 1.3rem; }
+.reaction-strip .mol-pair { display: inline-flex; align-items: center; gap: 16px; flex-wrap: nowrap; }
 .reaction-strip .arrow { display: flex; flex-direction: column; align-items: center; min-width: 140px; }
 .reaction-strip .arrow .above { font-size: 0.85rem; color: var(--brand); }
 .reaction-strip .arrow .shaft { font-size: 1.8rem; line-height: 1; }
