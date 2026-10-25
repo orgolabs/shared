@@ -321,6 +321,24 @@ main { padding: 32px 20px 10px; }
 }
 .scheme svg { display: block; margin: 0 auto; max-width: 100%; min-width: 560px; height: auto; }
 .scheme-caption { font-size: 0.85rem; color: var(--ink-soft); margin: 10px 4px 0; text-align: center; }
+
+/* Reaction pathway with real 2D structures on white "index-card" tiles */
+.pathway { display: flex; align-items: flex-start; gap: 4px; flex-wrap: nowrap; overflow-x: auto;
+  -webkit-overflow-scrolling: touch; padding: 10px 2px 4px; }
+.path-node { flex: 0 0 auto; width: 150px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.path-card { width: 100%; background: #ffffff; border: 1px solid var(--line); border-radius: 13px; padding: 6px;
+  box-shadow: var(--shadow); }
+.path-card img { width: 100%; height: 122px; object-fit: contain; display: block; }
+.path-node.major .path-card { border-color: var(--major); box-shadow: 0 0 0 1.5px var(--major), var(--shadow); }
+.path-node.minor .path-card { border-color: var(--minor); box-shadow: 0 0 0 1.5px var(--minor), var(--shadow); }
+.path-name { font-weight: 600; font-size: 0.88rem; margin: 10px 0 0; }
+.path-sub { font-size: 0.72rem; color: var(--ink-soft); margin-top: 1px; }
+.path-op { flex: 0 0 auto; width: 92px; padding-top: 48px; display: flex; flex-direction: column; align-items: center; }
+.path-op .cond { font-size: 0.72rem; font-weight: 600; color: var(--brand-ink); text-align: center; line-height: 1.25; }
+.path-op .shaft { font-size: 1.6rem; line-height: 1; color: var(--ink-soft); margin: 3px 0; }
+.path-op .sub { font-size: 0.66rem; color: var(--ink-soft); text-align: center; line-height: 1.2; }
+.path-op.plus { width: 34px; }
+.path-op.plus .shaft { font-size: 1.3rem; }
 .scheme text { font-family: inherit; }
 .sv-name { fill: var(--ink); font-weight: 700; }
 .sv-sub  { fill: var(--ink-soft); }
