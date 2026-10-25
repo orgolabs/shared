@@ -11,8 +11,8 @@
   --ink: #16211b;
   --ink-soft: #5c685f;
   --line: #e2dccd;
-  --brand: #0b9d63;
-  --brand-ink: #0a7a4d;
+  --brand: #0c7a4e;
+  --brand-ink: #075c3a;
   --major: #15803d;
   --major-bg: #e8f3ea;
   --minor: #c2410c;
@@ -34,8 +34,8 @@
     --ink: #e9efe7;
     --ink-soft: #94a39a;
     --line: #1e2c26;
-    --brand: #34d399;
-    --brand-ink: #6ee7b7;
+    --brand: #58bf9b;
+    --brand-ink: #8ad8c0;
     --major: #4ade80;
     --major-bg: #11301f;
     --minor: #fb923c;
@@ -62,7 +62,9 @@ body {
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
-h1, h2 { font-family: var(--display); font-weight: 600; letter-spacing: -0.02em; }
+h1, h2 { font-family: var(--display); font-weight: 600; letter-spacing: -0.01em; }
+/* readable measure for body prose (keeps long paragraphs from spanning the full width) */
+.card > p, .section-intro, .callout p, .mech-step p, .safety { max-width: 72ch; }
 
 a { color: var(--brand); }
 a:hover { color: var(--brand-ink); }
@@ -127,6 +129,7 @@ a:hover { color: var(--brand-ink); }
   padding: 7px 13px; border-radius: 999px; font-size: 0.9rem; font-weight: 600;
 }
 .tocbar a:hover { background: var(--surface-2); color: var(--ink); }
+.tocbar a.active { color: var(--ink); background: var(--surface-2); box-shadow: inset 0 -2px 0 var(--brand); }
 .tocbar a:focus-visible,
 .brand:focus-visible,
 .brand-repo:focus-visible,
