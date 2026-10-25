@@ -20,7 +20,9 @@
     window.VIEWERS.forEach(function (m) {
       var el = document.getElementById(m.id);
       if (!el || !window.STRUCTURES[m.key]) return;
-      var v = window.$3Dmol.createViewer(el, { backgroundAlpha: 0 });
+      // Consistent dark "instrument" backdrop in both themes so CPK colors
+      // (incl. white H) always read — a white paper background would hide them.
+      var v = window.$3Dmol.createViewer(el, { backgroundColor: "0x0d1512" });
       v.addModel(window.STRUCTURES[m.key], "sdf");
       viewers.push(v);
       applyStyle(v); v.zoomTo(); v.render();

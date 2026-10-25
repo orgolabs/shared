@@ -1,43 +1,48 @@
-/* Reduction of Camphor — stylesheet
-   Light/dark aware, responsive, no external CSS dependencies. */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap');
+
+/* orgolabs shared stylesheet — "chalkboard chemistry" identity
+   Serif display (Fraunces) + grotesque body (Inter), warm-paper / deep-ink themes,
+   emerald accent tuned to the logo. Light/dark aware, responsive. */
 
 :root {
-  --bg: #f6f7f9;
-  --surface: #ffffff;
-  --surface-2: #eef1f5;
-  --ink: #1b2330;
-  --ink-soft: #566074;
-  --line: #e2e6ec;
-  --brand: #2b579a;
-  --brand-ink: #1d3c6e;
+  --bg: #f4f1e9;
+  --surface: #fffdf7;
+  --surface-2: #efebe0;
+  --ink: #16211b;
+  --ink-soft: #5c685f;
+  --line: #e2dccd;
+  --brand: #0b9d63;
+  --brand-ink: #0a7a4d;
   --major: #15803d;
-  --major-bg: #e9f7ee;
+  --major-bg: #e8f3ea;
   --minor: #c2410c;
-  --minor-bg: #fdeee4;
+  --minor-bg: #f8ece0;
   --accent-yellow: #b45309;
-  --on-brand: #ffffff;
+  --on-brand: #fffdf7;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --radius: 14px;
-  --shadow: 0 6px 24px rgba(20, 30, 50, 0.07);
+  --shadow: 0 1px 0 rgba(20,30,20,.04), 0 16px 36px -24px rgba(20,40,30,.26);
   --maxw: 1120px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0e1420;
-    --surface: #161e2d;
-    --surface-2: #1e2838;
-    --ink: #e8edf5;
-    --ink-soft: #9aa7bd;
-    --line: #28344a;
-    --brand: #6ea8ff;
-    --brand-ink: #a9c9ff;
+    --bg: #090d0b;
+    --surface: #101713;
+    --surface-2: #161f1a;
+    --ink: #e9efe7;
+    --ink-soft: #94a39a;
+    --line: #1e2c26;
+    --brand: #34d399;
+    --brand-ink: #6ee7b7;
     --major: #4ade80;
     --major-bg: #11301f;
     --minor: #fb923c;
     --minor-bg: #3a1f10;
     --accent-yellow: #fbbf24;
-    --on-brand: #0e1420;
-    --shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    --on-brand: #081109;
+    --shadow: 0 18px 44px -26px rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -47,14 +52,17 @@ html { scroll-behavior: smooth; scroll-padding-top: 64px; }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--sans);
   background: var(--bg);
   color: var(--ink);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+h1, h2 { font-family: var(--display); font-weight: 600; letter-spacing: -0.02em; }
 
 a { color: var(--brand); }
 a:hover { color: var(--brand-ink); }
@@ -173,7 +181,7 @@ main { padding: 32px 20px 10px; }
 .viewer-card figcaption { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; margin-bottom: 10px; }
 .viewer {
   position: relative; width: 100%; height: 300px; border-radius: 10px;
-  background: radial-gradient(circle at 50% 35%, var(--surface), var(--surface-2));
+  background: radial-gradient(circle at 50% 30%, #16211c, #0d1512);
   border: 1px solid var(--line); overflow: hidden; touch-action: none;
 }
 .viewer canvas { border-radius: 10px; }
