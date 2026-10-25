@@ -186,9 +186,13 @@
       wireControls();
       wireCalculator();
 
-      // 3D viewers (divs now exist) + scrollspy
-      loadScript(SHARED + "/viewer.js");
-      loadScript(SHARED + "/nav.js");
+      // 3D viewers (divs now exist): load 3Dmol first, then the viewer controller
+      if ((LAB.viewers || []).length) {
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.5.5/3Dmol-min.js").then(function () {
+          loadScript(SHARED + "/viewer.js");
+        });
+      }
+      loadScript(SHARED + "/nav.js");  // scrollspy
 
       // chemistry: KaTeX + mhchem + auto-render over $...$ and explicit .chem[data-tex]
       loadScript(KV + "/katex.min.js").then(function () {
